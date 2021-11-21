@@ -4,6 +4,10 @@ body {
 .mb--1 {
   margin-bottom: -10px;
 }
+.zig{
+  margin-top: -5px;
+  width: 8vmin;
+}
 
 /* navbar */
 .navbar {
@@ -17,7 +21,7 @@ body {
   width: 16vmin;
 }
 .navbar-nav a {
-  font-size: 2rem;
+  font-size: 3.5vmin;
 }
 @media (max-width: 1200px) {
   .navbar-nav a {
@@ -98,6 +102,36 @@ body {
 /* red arrow */
 .miss {
   color: #be1f25;
+  animation: miss 1s;
+}
+@keyframes miss {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
 .arrow-parint {
   transform: translateX(-50%);
@@ -211,11 +245,20 @@ textarea:focus {
   color: #fff;
   letter-spacing: 3px;
   font-size: 1.1rem;
+  transition: 0.3s;
+}
+.contact input[type="submit"]:hover {
+  background-color: #a31f29;
 }
 /* end contact */
 
 /* footer */
 .footer * {
-  font-size: 1.4rem;
+  font-size: 3vmin;
   color: #707070;
+}
+@media (min-width: 1400px) {
+  .footer * {
+    font-size: 2.5vmin;
+  }
 }

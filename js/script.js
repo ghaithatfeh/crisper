@@ -1,10 +1,16 @@
+// sections selecters
 const navbar = document.querySelector('.navbar');
+const home = document.querySelector('#home');
+const about = document.querySelector('#about');
+const menu = document.querySelector('#menu');
+const contact = document.querySelector('#contact');
+
 const shareIcone = document.querySelector('#share-icone path');
 const navbarLogo = document.querySelectorAll('#white path');
 const navbarToggler = document.querySelector('.navbar-toggler');
 const navbarTogglerBtn = document.querySelector('.navbar-toggler img');
 const navbarText = document.querySelectorAll('.navbar ul a');
-const about = document.querySelector('#about')
+const navbarZig = document.querySelector('.zig');
 
 navbarToggler.onclick = () => {
     if (navbarTogglerBtn.getAttribute('src') == "images/navbar/hamburger.svg" || navbarTogglerBtn.getAttribute('src') == "images/navbar/hamburger-red.svg") {
@@ -29,6 +35,7 @@ window.onscroll = () => {
     if (window.scrollY <= about.offsetTop - 200) {
         navbarTransperant();
         navbar.classList.remove('navbar-shadow');
+        navbarZig.classList.add('d-lg-block');
     }
 }
 
