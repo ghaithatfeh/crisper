@@ -1,8 +1,8 @@
 body {
   font-family: "Harmattan", sans-serif;
 }
-.mb--1{
-margin-bottom: -10px;
+.mb--1 {
+  margin-bottom: -10px;
 }
 
 /* navbar */
@@ -115,12 +115,13 @@ margin-bottom: -10px;
 #arrow path {
   animation-name: arrow;
   animation-delay: 0.5s;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
   animation-direction: alternate;
 }
 @keyframes arrow {
-  0%,
+  /* 0%,
   20%,
   53%,
   80%,
@@ -139,14 +140,14 @@ margin-bottom: -10px;
   }
   90% {
     transform: translate3d(0, 4px, 0);
-  }
-  /* to {
-    transform: translateY(3vh);
   } */
+  to {
+    transform: translateY(2vh);
+  }
 }
 
 /* start about */
-.about{
+.about {
   padding-top: 7rem;
 }
 .about h1 {
@@ -166,14 +167,14 @@ margin-bottom: -10px;
 .about h1 + img {
   width: 40vmin;
 }
-.about .container-fluid{
+.about .container-fluid {
   background-color: #f7f7f7;
 }
-.about .container-fluid h3{
+.about .container-fluid h3 {
   font-size: 1.4rem;
   margin-top: 10px;
   color: #707070;
-  opacity: .8;
+  opacity: 0.8;
 }
 @media (min-width: 1500px) {
   .about h1 {
@@ -182,35 +183,39 @@ margin-bottom: -10px;
 }
 
 /* start contact */
-.contact{
+.contact {
   padding: 20vh 20px;
   background-image: url(../images/contact/bg.png);
   background-position: center;
   background-size: cover;
 }
-.contact .row{
+.contact .row {
   background-color: #fff;
   box-shadow: 0 0 15px #dfdfdf;
 }
-.contact h3{
+.contact h3 {
   color: #707070;
 }
 .contact input,
-textarea{
-  border: .5px solid #dfdfdf ;
+textarea {
+  border: 0.5px solid #dfdfdf;
   border-radius: 3px;
+  resize: none;
 }
 .contact input,
-textarea:focus{
+textarea:focus {
   outline: none;
 }
-.contact input[type="submit"]{
+.contact input[type="submit"] {
   background-color: #be1f25;
   color: #fff;
+  letter-spacing: 3px;
+  font-size: 1.1rem;
 }
 /* end contact */
 
 /* footer */
-.footer *{
+.footer * {
+  font-size: 1.4rem;
   color: #707070;
 }
