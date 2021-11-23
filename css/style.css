@@ -13,7 +13,7 @@ body {
 .navbar {
   z-index: 3;
 }
-.navbar-nav > img {
+.navbar-nav > svg {
   height: 7px;
   width: 30%;
 }

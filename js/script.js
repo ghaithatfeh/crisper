@@ -28,15 +28,28 @@ navbarToggler.onclick = () => {
 }
 
 window.onscroll = () => {
-    if (window.scrollY >= about.offsetTop - 200) {
+    if (window.scrollY >= about.offsetTop - 200 && navbarTogglerBtn.getAttribute('src') != "images/navbar/close-hamburger.svg") {
         navbarWhite("images/navbar/hamburger-red.svg");
         navbar.classList.add('navbar-shadow');
     }
-    if (window.scrollY <= about.offsetTop - 200) {
+    if (window.scrollY <= about.offsetTop - 200 && navbarTogglerBtn.getAttribute('src') != "images/navbar/close-hamburger.svg") {
         navbarTransperant();
         navbar.classList.remove('navbar-shadow');
         navbarZig.classList.add('d-lg-block');
     }
+
+    const sections = document.querySelectorAll('.section');
+    const zigs = document.querySelectorAll('.zig');
+    const smZigs = document.querySelectorAll('#Path_4249');
+    sections.forEach(function (value, i) {
+        if (window.scrollY >= value.offsetTop - 200) {
+            zigs.forEach(y => y.classList.remove('d-lg-block'));
+            zigs[i].classList.add('d-lg-block');
+            
+            smZigs.forEach(y => y.style.fill = '#fecf00');
+            smZigs[i].style.fill = '#be1f25';
+        }
+    })
 }
 
 function navbarWhite(hum) {
