@@ -4,7 +4,7 @@ body {
 .mb--1 {
   margin-bottom: -10px;
 }
-.zig{
+.zig {
   margin-top: -5px;
   width: 8vmin;
 }
@@ -155,26 +155,6 @@ body {
   animation-direction: alternate;
 }
 @keyframes arrow {
-  /* 0%,
-  20%,
-  53%,
-  80%,
-  100% {
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 17px, 0);
-  }
-  40%,
-  43% {
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, 8px, 0);
-  }
-  70% {
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, 17px, 0);
-  }
-  90% {
-    transform: translate3d(0, 4px, 0);
-  } */
   to {
     transform: translateY(2vh);
   }
@@ -184,20 +164,38 @@ body {
 .about {
   padding-top: 7rem;
 }
+@media (max-width: 500px){
+  .about {
+    padding-top: 4rem;
+  }
+}
 .about h1 {
   color: #fecf00;
   font-size: 9vmin;
 }
 .about p {
   color: #707070;
-  max-width: 55%;
+  max-width: 65%;
   font-size: 3vmin;
 }
-.about p:last-of-type {
+@media (max-width: 700px){
+  .about p {
+    font-size: 5vmin;
+  }
+}
+@media (max-width: 1200px){
+  .about p {
+    border: 4px #be1f25 dashed;
+    border-radius: 20px;
+    padding: 20px;
+    line-height: 40px;
+  }
+}
+/* .about p:last-of-type {
   color: #707070;
   max-width: 70%;
   font-size: 3vmin;
-}
+} */
 .about h1 + img {
   width: 40vmin;
 }
@@ -214,6 +212,41 @@ body {
   .about h1 {
     font-size: 7vmin;
   }
+}
+/* start menu */
+.menu {
+  padding: 20vh 0;
+}
+.menu ul {
+  list-style: none;
+  color: #707070;
+  font-size: 1.3rem;
+}
+.menu ul::-webkit-scrollbar {
+  background-color: #dfdfdf52;
+  height: 10px;
+  border-radius: 30px;
+}
+.menu ul::-webkit-scrollbar-thumb {
+  background-color: #be1f25;
+  border-radius: 30px;
+  width: 35%;
+}
+.menu ul li:hover {
+  cursor: pointer;
+}
+.menu .sandwich img {
+  border-radius: 18px;
+}
+.menu .sandwich span {
+  color: #707070;
+  font-size: 1.3rem;
+}
+.menu .sandwich button {
+  font-size: 1.2rem;
+  color: #be1f25;
+  border: 0;
+  background-color: transparent;
 }
 
 /* start contact */
