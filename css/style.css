@@ -40,18 +40,27 @@ body {
 /* home */
 .intro-text {
   position: absolute;
-  bottom: 1.5vmin;
+  bottom: 5vmin;
   left: -50px;
-  max-width: 50vw;
+  max-width: 40vw;
 }
 .carousel-caption > img {
   position: absolute;
   text-align: unset;
-  left: -17vmin;
-  bottom: -4vmin;
-  max-width: 45vw;
+  left: -20vmin;
+  bottom: -3vmin;
+  max-width: 50vw;
 }
-
+@media (max-width: 600px){
+  .carousel-item > img{
+    height: 50vh;
+    object-fit: cover;
+  }
+  .carousel-caption > img {
+    bottom: 0;
+    height: 110px;
+  }
+}
 /* edit slider points */
 .carousel-inner {
   max-height: 100vh;
