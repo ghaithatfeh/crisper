@@ -1,9 +1,11 @@
 const list = document.querySelectorAll('.list');
 list.forEach(li => {
-    li.onclick = () => showMenu(li.innerHTML)
+    li.onclick = () => {
+        showMenu(li.innerHTML);
+        console.log(li.nextElementSibling.firstElementChild);
+        li.nextElementSibling.firstElementChild.style.fill = '#be1f25';
+    }
 })
-
-showMenu('sandwich')
 
 function showMenu(fileName) {
     const dataViewer = document.querySelector('.data-viewer');
@@ -25,4 +27,23 @@ function showMenu(fileName) {
         }
     }
     xReq.send();
+}
+
+function showMenuExternal() {
+    const dataViewer = document.querySelector('.data-viewer');
+    fetch('https://jsonplaceholder.typicode.com/photos/')
+        .then(response => response.json())
+        .then(data => {
+            console
+            for (let i = 0; i < 6; i++)
+                dataViewer.innerHTML += `
+            <div class="sandwich col-6 col-lg-4 text-center mt-3">
+            <img class="img-fluid" src="${data[0].thumbnailUrl}" alt="">
+            <span class="d-block mt-3">${data[0].title}</span>
+            <button>
+                <img src="images/menu/info-icon.svg" alt="">
+                Details</button>
+            </div>
+            `
+        })
 }
