@@ -1,10 +1,7 @@
 const list = document.querySelectorAll('.list');
 list.forEach(li => {
-    li.onclick = () => {
-        showMenu(li.innerHTML);
-        console.log(li.nextElementSibling.firstElementChild);
-        li.nextElementSibling.firstElementChild.style.fill = '#be1f25';
-    }
+    li.onclick = () => showMenu(li.innerHTML)
+    
 })
 
 function showMenu(fileName) {
