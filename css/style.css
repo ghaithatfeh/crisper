@@ -20,6 +20,9 @@ body {
 .navbar-brand {
   width: 16vmin;
 }
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 .navbar-nav a {
   font-size: 3.5vmin;
 }
@@ -51,8 +54,8 @@ body {
   bottom: -3vmin;
   max-width: 50vw;
 }
-@media (max-width: 600px){
-  .carousel-item > img{
+@media (max-width: 600px) {
+  .carousel-item > img {
     height: 50vh;
     object-fit: cover;
   }
@@ -173,7 +176,7 @@ body {
 .about {
   padding-top: 7rem;
 }
-@media (max-width: 500px){
+@media (max-width: 500px) {
   .about {
     padding-top: 4rem;
   }
@@ -187,12 +190,12 @@ body {
   max-width: 65%;
   font-size: 3vmin;
 }
-@media (max-width: 700px){
+@media (max-width: 700px) {
   .about p {
     font-size: 5vmin;
   }
 }
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .about p {
     border: 4px #be1f25 dashed;
     border-radius: 20px;
@@ -257,6 +260,9 @@ body {
   border: 0;
   background-color: transparent;
 }
+/* .zzz{
+
+} */
 
 /* start contact */
 .contact {

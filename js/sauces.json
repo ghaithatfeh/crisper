@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Hot Comeback Sauce",
+        "img": "images/menu/sauces1.jpg"
+    },
+    {
+        "name": "Ranch Sauce",
+        "img": "images/menu/sauces2.jpg"
+    },
+    {
+        "name": "Mix Barbecue Sauce",
+        "img": "images/menu/sauces3.jpg"
+    },
+    {
+        "name": "Honey Mustard Sauce",
+        "img": "images/menu/sauces4.jpg"
+    },
+    {
+        "name": "Mix Sauce",
+        "img": "images/menu/sauces5.jpg"
+    },
+    {
+        "name": "Special Secret Sauce",
+        "img": "images/menu/sauces6.jpg"
+    }
+]

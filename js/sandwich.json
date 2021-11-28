@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Classican Crispy Sandwich",
+        "img": "images/menu/sandwish1.jpg"
+    },
+    {
+        "name": "Secret Crispy Chicken Sandwich",
+        "img": "images/menu/sandwish2.jpg"
+    },
+    {
+        "name": "Pepperoni BBQ Crispy",
+        "img": "images/menu/sandwish3.jpg"
+    },
+    {
+        "name": "Goldish sweety crispy",
+        "img": "images/menu/sandwish4.jpg"
+    },
+    {
+        "name": "Buffalo crispy",
+        "img": "images/menu/sandwish5.jpg"
+    },
+    {
+        "name": "Mixy Cheesy Melty Sandwich",
+        "img": "images/menu/sandwish6.jpg"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "COCA COLA BOTTLE",
+        "img": "images/menu/soda1.jpg"
+    },
+    {
+        "name": "COCA COLA BOTTLE LITE",
+        "img": "images/menu/soda2.jpg"
+    },
+    {
+        "name": "Fanta orange Bottle 250 ml",
+        "img": "images/menu/soda3.jpg"
+    },
+    {
+        "name": "Sprite bottle",
+        "img": "images/menu/soda4.jpg"
+    },
+    {
+        "name": "mineral water",
+        "img": "images/menu/soda5.jpg"
+    }
+]
