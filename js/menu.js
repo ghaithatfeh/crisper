@@ -14,7 +14,7 @@ list.forEach(li => {
 
 function showMenu(fileName) {
     var xReq = new XMLHttpRequest();
-    xReq.open('GET', '../'+ fileName +'.json');
+    xReq.open('GET', 'js/'+ fileName +'.json');
     xReq.onload = () => {
         document.querySelector('.loading-animation').style.display = 'none';
         xData = JSON.parse(xReq.responseText);
