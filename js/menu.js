@@ -1,17 +1,18 @@
 const list = document.querySelectorAll('.list');
+const dataViewer = document.querySelector('.data-viewer');
 list.forEach(li => {
     li.onclick = () => {
-        showMenuExternal(li.innerHTML);
-        document.querySelectorAll('#path_yallow').forEach(e=> e.setAttribute("transform", "translate(23 -401)"))
-        document.querySelectorAll('#path_red').forEach(e=> e.setAttribute("transform", "translate(197 -401)"))
-
+        dataViewer.innerHTML = '';
+        document.querySelector('.loading-animation').style.display = 'flex';
+        document.querySelectorAll('#path_yallow').forEach(e => e.setAttribute("transform", "translate(23 -401)"))
+        document.querySelectorAll('#path_red').forEach(e => e.setAttribute("transform", "translate(197 -401)"))
         li.nextElementSibling.firstElementChild.setAttribute("transform", "translate(-150 -401)")
         li.nextElementSibling.lastElementChild.setAttribute("transform", "translate(23 -401)")
+        showMenuExternal(li.innerHTML);
     }
 })
 
 function showMenu(fileName) {
-    const dataViewer = document.querySelector('.data-viewer');
     var xReq = new XMLHttpRequest();
     xReq.open('GET', 'js/' + fileName + '.json');
     xReq.onload = () => {
@@ -37,7 +38,7 @@ function showMenuExternal() {
     fetch('https://jsonplaceholder.typicode.com/photos/')
         .then(response => response.json())
         .then(data => {
-            dataViewer.innerHTML = '';
+            document.querySelector('.loading-animation').style.display = 'none';
             for (let i = 0; i < 6; i++)
                 dataViewer.innerHTML += `
             <div class="sandwich col-6 col-lg-4 text-center mt-3">
