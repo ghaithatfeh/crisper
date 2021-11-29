@@ -8,7 +8,7 @@ list.forEach(li => {
         document.querySelectorAll('#path_red').forEach(e => e.setAttribute("transform", "translate(197 -401)"))
         li.nextElementSibling.firstElementChild.setAttribute("transform", "translate(-150 -401)")
         li.nextElementSibling.lastElementChild.setAttribute("transform", "translate(23 -401)")
-        showMenuExternal(li.innerHTML);
+        showMenu(li.innerHTML);
     }
 })
 
@@ -16,6 +16,7 @@ function showMenu(fileName) {
     var xReq = new XMLHttpRequest();
     xReq.open('GET', 'js/' + fileName + '.json');
     xReq.onload = () => {
+        document.querySelector('.loading-animation').style.display = 'none';
         xData = JSON.parse(xReq.responseText);
         dataViewer.innerHTML = '';
         for (let i = 0; i < xData.length; i++) {
