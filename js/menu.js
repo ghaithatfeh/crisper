@@ -8,7 +8,7 @@ list.forEach(li => {
         document.querySelectorAll('#path_red').forEach(e => e.setAttribute("transform", "translate(197 -401)"))
         li.nextElementSibling.firstElementChild.setAttribute("transform", "translate(-150 -401)")
         li.nextElementSibling.lastElementChild.setAttribute("transform", "translate(23 -401)")
-        showMenu(li.innerHTML.toLowerCase);
+        showMenu(li.innerHTML.toLowerCase());
     }
 })
 
