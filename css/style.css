@@ -260,6 +260,9 @@ body {
   border: 0;
   background-color: transparent;
 }
+.zigzag-yr{
+  transition: 1s;
+}
 
 /* start contact */
 .contact {
