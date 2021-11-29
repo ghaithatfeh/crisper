@@ -227,12 +227,18 @@ body {
 }
 /* loading animation */
 .loading-animation {
+  min-height: 40vmin;
   height: 100%;
   width: 100%;
   display: none;
   justify-content: center;
   align-items: center;
   background-color: transparent;
+}
+@media (max-width: 991px){
+  .loading-animation {
+    align-items: flex-end;
+  }
 }
 .loading-animation >div:first-child{
   height: 100vh;
