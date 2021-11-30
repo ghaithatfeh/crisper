@@ -7,10 +7,10 @@ $(document).ready(function () {
         $('.path_red').attr("transform", "translate(197 -401)");
         $(this).next().find('#path_yallow').attr("transform", "translate(-150 -401)");
         $(this).next().find('#path_red').attr("transform", "translate(23 -401)");
-        showMenuJ((this).innerHTML.toLowerCase());
+        showMenu((this).innerHTML.toLowerCase());
     });
 
-    function showMenuJ(fileName) {
+    function showMenu(fileName) {
         $.get('js/' + fileName + '.json', function (data) {
             $('.loading-animation').css('display', 'none');
             $('.data-viewer').empty();
@@ -27,6 +27,31 @@ $(document).ready(function () {
             }
         });
     }
+
+    function showMenuExternal() {
+        fetch('https://jsonplaceholder.typicode.com/photos/')
+            .then(response => response.json())
+            .then(data => {
+                $('.loading-animation').css('display', 'none');
+                for (let i = 0; i < 6; i++)
+                    $('.data-viewer').append(`
+            <div class="sandwich col-6 col-lg-4 text-center mt-3">
+            <img class="img-fluid" src="${data[0].thumbnailUrl}" alt="">
+            <span class="d-block mt-3">${data[0].title}</span>
+            <button>
+                <img src="images/menu/info-icon.svg" alt="">
+                Details</button>
+            </div>
+            `)
+            })
+    }
+
+});
+
+
+
+
+    // AJAX in JS => :
 
     // function showMenu(fileName) {
     //     var xReq = new XMLHttpRequest();
@@ -49,25 +74,3 @@ $(document).ready(function () {
     //     }
     //     xReq.send();
     // }
-
-});
-
-
-// function showMenuExternal() {
-//     const dataViewer = document.querySelector('.data-viewer');
-//     fetch('https://jsonplaceholder.typicode.com/photos/')
-//         .then(response => response.json())
-//         .then(data => {
-//             document.querySelector('.loading-animation').style.display = 'none';
-//             for (let i = 0; i < 6; i++)
-//                 dataViewer.innerHTML += `
-//             <div class="sandwich col-6 col-lg-4 text-center mt-3">
-//             <img class="img-fluid" src="${data[0].thumbnailUrl}" alt="">
-//             <span class="d-block mt-3">${data[0].title}</span>
-//             <button>
-//                 <img src="images/menu/info-icon.svg" alt="">
-//                 Details</button>
-//             </div>
-//             `
-//         })
-// }
